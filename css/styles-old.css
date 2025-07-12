@@ -83,61 +83,12 @@ color: #434455;
 
 
 
-
-
-
-.hero-banner-button:hover {
-    background-color: #404BBF;
-}
-.hero-banner-button:focus {
-    background-color: #404BBF;
-}
-
 /* hero banner end */
 
 /* advanteges start */
-.advanteges {
-    color: #2e2f42;
-}
-
-.advanteges-icons-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     height: 112px;
-    background-color: #f4f4fd;
-    border-radius: 4px;
-    border: 1px solid #8e8f99;
-    margin-bottom: 8px;
-}
 
 
 
-.advanteges-icons {
-    width: 264px;
-    height: 112px;
-    padding: 24px 100px;
-}
-
-
-.advanteges-list {
-    display: flex;
-    gap: 24px;
-
-}
-
-.advanteges-list-items {
-    width: calc((100% - 72px) / 4);
-}
-
-.advanteges-list-items-title {
-    margin-bottom: 8px;
-}
-
-.advanteges-list-items-text {
-   color: #434455 ; 
-
-}
 
 /* advanteges end */
 
@@ -368,6 +319,8 @@ color: #f4f4fd;
     gap: 16px;
 
 }
+
+
 
 .footer-container {
     display: flex;
@@ -795,34 +748,4 @@ cursor: pointer;
 display: block;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
