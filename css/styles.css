@@ -585,8 +585,10 @@ color: #2e2f42;
     display: flex;
     flex-wrap: nowrap;
     gap: 24px;
-
 }
+   
+
+
 
 .advanteges-list-items-title  {
 font-weight: 500;
