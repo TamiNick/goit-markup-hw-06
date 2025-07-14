@@ -316,6 +316,14 @@ height: 4px;
     gap: 40px;
 }
 
+.active-link-nav {
+color: #404bbf;
+font-weight: 700;
+font-size: 36px;
+line-height: 111%;
+letter-spacing: 0.02em;
+}
+
 .mobile-nav-links {
 font-weight: 700;
 font-size: 36px;
@@ -373,6 +381,15 @@ color: #434455;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
+.active-link-contacts {
+    font-weight: 500;
+font-size: 20px;
+font-style: normal;
+line-height: 120%;
+letter-spacing: 0.02em;
+    color: #404bbf;
+}
+
 .mobile-menu-contacts:hover,
 .navigation-links:hover,
 .mobile-menu-contacts:focus,
@@ -393,7 +410,11 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 /* hero */
 
 .hero-banner {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), image-set(
+    url(../images/hero-bg-mobile.jpg) 1x,
+    url(../images/hero-bg-mobile@2x.jpg) 2x,
+    url(../images/people.jpg)
+    );
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -443,10 +464,14 @@ background-color: #404bbf;
 
 @media screen and (min-width: 768px) {
     .hero-banner {
-    background-size: contain;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), image-set(
+    url(../images/hero-bg-tablet.jpg) 1x,
+    url(../images/hero-bg-tablet@2x.jpg) 2x,
+    url(../images/people.jpg)
+    );   
+    background-size: cover;
     padding-top: 112px;
     max-width: 100%;
-    min-height: 538px;
 }
 .hero-banner-title {
 font-weight: 700;
@@ -476,14 +501,16 @@ color: #fff;
 
 @media screen and (min-width: 1158px) {
 .hero-banner {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people.jpg);
-    background-size: contain;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), image-set(
+    url(../images/hero-bg-dekstop.jpg) 1x,
+    url(../images/hero-bg-dekstop@2x.jpg) 2x,
+    url(../images/people.jpg));  
+    background-size: cover;
     background-color:#2e2f42;
     padding-top: 188px;
     padding-bottom: 188px;
     max-width: 1440px;
     margin: 0 auto;
-    min-height: 538px;
 }
 .hero-banner-title {
         font-weight: 700;
@@ -555,7 +582,7 @@ margin-bottom: 8px;
 .advanteges-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
 
 }
 
@@ -661,9 +688,7 @@ color: #2e2f42;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-list-items:nth-child(-n+2) {
-    margin-bottom: 64px;
-}
+
 
 
 .team-list-container {
@@ -671,7 +696,6 @@ color: #2e2f42;
 }
 
 .team-list-items-photo {
-    display: block;
 }
 
 .team-list-items-title {
@@ -722,15 +746,11 @@ color: #2e2f42;
 @media screen and (min-width: 768px) {
 .team-list {
     justify-content: center;
-    gap: 24px;
+    gap: 64px 24px;
     flex-direction: row;
 }
 }
-
 @media screen and (min-width: 1158px) {
-    .team-list-items:nth-child(-n+2) {
-    margin-bottom: 0px;
-}
 }
 
 /* portfolio */
@@ -769,7 +789,6 @@ justify-content: center;
 }
 
 .portfolio-list-items-photo {
-    display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
     
@@ -888,7 +907,6 @@ font-size: 16px;
 line-height: 150%;
 letter-spacing: 0.02em;
 color: #f4f4fd;
-margin-bottom: 72px;
 
 
 }
@@ -906,7 +924,6 @@ margin-bottom: 72px;
     border-radius: 50%;
     fill: #fff;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 72px;
 }
 
 .footer-container {
@@ -914,6 +931,7 @@ margin-bottom: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .footer-icons-items:hover {
@@ -921,9 +939,11 @@ margin-bottom: 72px;
 }
 
 .footer-text-container {
+    margin-bottom: 72px;
 }
 
 .social-icons-footer {
+    margin-bottom: 72px;
 }
 
 .social-icons-text {
@@ -1022,8 +1042,7 @@ justify-content: center;
 align-items: center; 
 cursor: pointer;
 margin-top: 16px;
-margin-bottom: 96px;
-margin: 16px auto 96px auto;
+margin: 16px auto 0px auto;
 }
 
  .form-button-footer:hover {
@@ -1078,11 +1097,6 @@ text-align: start;
     text-align: start;
 }
 
-.footer-text {
-margin-bottom: 42px;
-
-
-}
 
 }
 
@@ -1098,11 +1112,18 @@ margin-bottom: 42px;
 
 .footer-text-container {
     margin-right: 104px;
+    margin-bottom: 0px
+
+}
+
+.social-icons-footer {
+    margin-bottom: 0;
 }
 
 
 .footer-form-container {
-   margin-left: 60px;
+   margin-left: 80px;
+   padding-right: 0;
    
 }
 .email-send {
